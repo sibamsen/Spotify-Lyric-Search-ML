@@ -4,9 +4,9 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load model & data
-vectorizer = joblib.load("../model/vectorizer.pkl")
-tfidf_matrix = joblib.load("../model/tfidf_matrix.pkl")
-df = pd.read_csv("../data/processed_lyrics.csv")
+vectorizer = joblib.load("model/vectorizer.pkl")
+tfidf_matrix = joblib.load("model/tfidf_matrix.pkl")
+df = pd.read_csv("data/processed_lyrics.csv")
 
 def predict_song(lyrics, top_n=3):
     lyrics = lyrics.lower()
